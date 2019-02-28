@@ -1,0 +1,23 @@
+{
+  "name": "Atcoder Extention",
+  "version": "1.0",
+  "description": "Build an Extension!",
+  "permissions": ["declarativeContent", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://beta.atcoder.jp/contests/*/tasks/*"
+      ],
+      "css": ["content.css"],
+      "js": ["jquery-3.3.1.min.js","content.js"]
+    }
+  ],
+  "manifest_version": 2
+}
